@@ -1,0 +1,42 @@
+<!--
+ * @Author: liujian
+ * @Description: 
+ * @Date: 2021-10-26 09:38:01
+ * @LastEditTime: 2022-08-29 16:55:33
+ * @FilePath: /electron-vue3-vite/src/render/pages/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>electron</title>
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                /* 透明窗口不可拖拽，添加该属性，使整个文档成为可拖拽对象，如果点击事件失效，可在点击事件的dom上添加-webkit-app-region: no-drag */
+                /* -webkit-app-region: drag; */
+            }
+
+            #app {
+                height: 100%;
+                background: transparent;
+                overflow: hidden;
+                pointer-events: auto;
+                width: 960px;
+                height: 540px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app"></div>
+        <script type="module" src="./controlDisk/main.ts"></script>
+    </body>
+</html>
